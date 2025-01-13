@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+  
+
+{% load static %}
+
+
+<div class="container-fluid bg-3 text-center">    
+    <div class="row">
+        {% for i in social %}
+      <div class="col-sm-3">
+        <p> social media name:{{i.social_name}}</p>  <!--if we change  data it will change in all places-->
+        <img src="{{i.social_image.url}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>more used by:{{i.moreusedby}}</p>
+        <p>{{i.description}}</p>
+      </div>
+     {% endfor %}
+      
+    </div>
+  </div><br><br>
+  
+
+
+
+
+
+
+
+{% endblock %}

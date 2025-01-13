@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+
+<table border="2"column="2" width="1200"align="center" cell padding="10"cell spacing="6">
+  
+    <thead>
+        <th>cyberbullying Data</th>
+        <th>Predicted Output</th>
+    </thead>
+    {% for i in info %}
+    <tr>
+        <td>{{i.text}}</td>
+        <td>{{i.output}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+{% endblock %}
